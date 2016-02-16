@@ -31,6 +31,6 @@ while True:
     print 'HTTP request received:'
     print recvSocket.recv(1024)
     recvSocket.send("HTTP/1.1 200 OK\r\n\r\n" +
-                    "<html><body><h1>Hello World!</h1></body></html>" +
+                    "<html><body><h1>HOLA! Esta es tu IP</h1></body></html>" + str(address[0]) + "<html><body><h1>y de este puerto</h1></body></html>" + str(address[1]) +
                     "\r\n")
     recvSocket.close()
